@@ -5,9 +5,9 @@ import "./App.css";
 class App extends Component {
   state = {
     persons: [
-      { name: "Chris", age: 30 },
-      { name: "Fiyin", age: 28 },
-      { name: "Ghan", age: 27 },
+      { id: "sgas", name: "Chris", age: 30 },
+      { id: "gashs", name: "Fiyin", age: 28 },
+      { id: "aeifn", name: "Ghan", age: 27 },
     ],
     otherState: "some other value",
     showPersons: false,
@@ -56,6 +56,7 @@ class App extends Component {
                 name={person.name}
                 age={person.age}
                 click={() => this.deletePersonHandler(index)}
+                key={person.id}
               />
             );
           })}
@@ -68,7 +69,7 @@ class App extends Component {
         <h1>Hi, I'm a React App</h1>
         <p>this is really working!</p>
         <button onClick={this.togglePersonsHandler} style={style}>
-          Switch Name
+          Toggle Persons
         </button>
         {persons}
       </div>
