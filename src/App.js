@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Validation from "./Validaiton/Validation";
-import CharComponent from "./Char/Char";
+import Char from "./Char/Char";
 import "./App.css";
 
 class App extends Component {
@@ -38,7 +38,7 @@ class App extends Component {
     if (this.state.isLongEnough) {
       characters = inputChars.map((char, index) => {
         return (
-          <CharComponent
+          <Char
             key={index}
             character={char}
             click={(event, index) => this.removeCharacterBlock(event, index)}
