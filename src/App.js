@@ -20,7 +20,7 @@ class App extends Component {
     });
   };
 
-  removeCharacterBlock = (event, index) => {
+  removeCharacterBlock = (index) => {
     let input = this.state.inputText.split("");
     input.splice(index, 1);
     this.setState({
@@ -41,7 +41,7 @@ class App extends Component {
           <Char
             key={index}
             character={char}
-            click={(event, index) => this.removeCharacterBlock(event, index)}
+            click={(index) => this.removeCharacterBlock(index)}
           />
         );
       });
